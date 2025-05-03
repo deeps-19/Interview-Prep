@@ -1,0 +1,83 @@
+Variables
+A variable is like a container that holds data that can be reused or updated later in the program. In JavaScript, variables are declared using the keywords var, let, or const.
+
+1. var Keyword
+The var keyword is used to declare a variable. It has a function-scoped or globally-scoped behaviour.
+
+2. let Keyword
+The let keyword is introduced in ES6, has block scope and cannot be re-declared in the same scope.
+
+3. const Keyword
+The const keyword declares variables that cannot be reassigned. It’s block-scoped as well.
+
+Primitive Datatypes
+Primitive datatypes represent single values and are immutable.
+
+1. Number: Represents numeric values (integers and decimals).
+
+let n = 42;
+let pi = 3.14;
+2. String: Represents text enclosed in single or double quotes.
+
+let s = "Hello, World!";
+3. Boolean: Represents a logical value (true or false).
+
+let bool= true;
+4. Undefined: A variable that has been declared but not assigned a value.
+
+
+
+
+let notAssigned;
+console.log(notAssigned);
+
+Output
+undefined
+5. Null: Represents an intentional absence of any value.
+
+let empty = null;
+6. Symbol: Represents unique and immutable values, often used as object keys.
+
+let sym = Symbol('unique');
+7. BigInt: Represents integers larger than Number.MAX_SAFE_INTEGER.
+
+let bigNumber = 123456789012345678901234567890n;
+Non-Primitive Datatypes
+Non-primitive types are objects and can store collections of data or more complex entities.
+
+1. Object: Represents key-value pairs.
+
+let obj = {
+    name: "Amit",
+    age: 25
+};
+2. Array: Represents an ordered list of values.
+
+let a = ["red", "green", "blue"];
+3. Function: Represents reusable blocks of code.
+
+function fun() {
+    console.log("GeeksforGeeks");
+}
+
+
+Global Variables
+Global variables in JavaScript are those declared outside of any function or block scope. They are accessible from anywhere within the script, including inside functions and blocks. Variables declared without the var, let, or const keywords (prior to ES6) inside a function automatically become global variables.
+
+However, variables declared with var, let, or const inside a function are local to that function unless explicitly marked as global using window (in browser environments) or global (in Node.js).
+
+Key Characteristics of Global Variables:
+Scope: Accessible throughout the entire script, including inside functions and blocks.
+Automatic Global Variables: If a variable is declared inside a function without var, let, or const, it automatically becomes a global variable (a common source of bugs).
+Local Variables
+Local variables are defined within functions in JavaScript. They are confined to the scope of the function that defines them and cannot be accessed from outside. Attempting to access local variables outside their defining function results in an error.
+
+Key Characteristics of Local Variables:
+Scope: Limited to the function or block in which they are declared.
+Function-Specific: Each function can have its own local variables, even if they share the same name.
+How to use variables
+The scope of a variable or function determines what code has access to it.
+Variables that are created inside a function are local variables, and local variables can only be referred to by the code within the function.
+Variables created outside of functions are global variables, and the code in all functions has access to all global variables.
+If you forget to code the var keyword in a variable declaration, the JavaScript engine assumes that the variable is global. This can cause debugging problems.
+In general, it’s better to pass local variables from one function to another as parameters than it is to use global variables. That will make your code easier to understand with less chance of errors.
